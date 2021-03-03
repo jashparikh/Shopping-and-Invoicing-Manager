@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Invoice Generation with GST</string>
+    <string name="link">*To Visit the Government of India Website for GST Slabs Based on Product Category, <a href="https://cbic-gst.gov.in/gst-goods-services-rates.html">Click Here</a></string>
+    <string name = "press_back_again">WARNING: Going Back Will Remove All Items From the List</string>
+</resources>
