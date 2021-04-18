@@ -1,12 +1,8 @@
 package com.example.gst;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -15,6 +11,9 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -26,15 +25,27 @@ public class MainActivity2 extends AppCompatActivity {
     EditText edit1;
     double sum;
     double[] finalvalue;
-    Snackbar mSnackbar;
     boolean check;
-    AlertDialog.Builder confirm;
+    Snackbar snackbar;
 
     @Override
     public void onBackPressed() {
-            mSnackbar.show();
-        }
-
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity2.this);
+        builder.setTitle("Warning").setMessage("Going Back will remove all data");
+        builder.setPositiveButton("Delete Anyway", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                finish();
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
+        builder.show();
+    }
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,15 +54,9 @@ public class MainActivity2 extends AppCompatActivity {
         button1 = findViewById(R.id.button1);
         button2 = findViewById(R.id.button2);
         tview1 = findViewById(R.id.tview1);
-        edit1 =  findViewById(R.id.edit1);
-        listView =findViewById(R.id.listview);
+        edit1 = findViewById(R.id.edit1);
+        listView = findViewById(R.id.listview);
         final LinearLayout layout = findViewById(R.id.lv1);
-        mSnackbar = Snackbar.make(layout, R.string.press_back_again, Snackbar.LENGTH_LONG).setAction("Erase and Go Back", new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
         cost = new String[20];
         cost = page2.getStringArrayExtra("product_cost");
         final ArrayAdapter<Double> display = new ArrayAdapter(this, android.R.layout.simple_list_item_1, cost);

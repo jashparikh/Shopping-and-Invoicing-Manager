@@ -18,6 +18,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+Intent intent = getIntent();
 
     TextView tv1, tv2, tv3, tv4, tv5, tv6;
     Button btn1, btn2, btn3, btn4;
@@ -111,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
                 rb4.setChecked(false);
                 rb5.setChecked(false);
                 rb6.setChecked(false);
+                rb7.setChecked(false);
                 a1 = 0.0;
                 Toast.makeText(getApplicationContext(), "Cleared", Toast.LENGTH_SHORT).show();
             }
@@ -161,6 +163,7 @@ public class MainActivity extends AppCompatActivity {
             rb4.setChecked(false);
             rb5.setChecked(false);
             rb6.setChecked(false);
+            rb7.setChecked(false);
             array.clear();
         }
 

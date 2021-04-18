@@ -1,5 +1,19 @@
 <resources>
-    <string name="app_name">Invoice Generation with GST</string>
+    <string name="app_name">Grocery Shopping and Billing Manager</string>
+    <string name="act_name">GST and Invoice Generator</string>
     <string name="link">*To Visit the Government of India Website for GST Slabs Based on Product Category, <a href="https://cbic-gst.gov.in/gst-goods-services-rates.html">Click Here</a></string>
-    <string name = "press_back_again">WARNING: Going Back Will Remove All Items From the List</string>
+    <string name="press_back_again">WARNING: Going Back Will Remove All Items From the List</string>
+    <string name="title_activity_main3">MainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="go_to_gst_page">Click Here to Calculate Product Cost With GST</string>
+    <string name="add_new_item">Add New Item</string>
+    <string name="clear_list">Clear List</string>
+    <string name="ShoppingListActivity">Shopping List</string>
 </resources>

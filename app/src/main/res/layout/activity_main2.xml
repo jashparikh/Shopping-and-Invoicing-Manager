@@ -61,7 +61,7 @@
             android:focusableInTouchMode="false"
             android:hint="0"
             android:inputType="textPersonName"
-            android:textAlignment="center" />
+           />
 
     </LinearLayout>
 
